@@ -1,15 +1,9 @@
-import logo from '../../assets/images/logo.png'
 import Button from '../Button'
-import {
-  HeaderLogo,
-  HeaderContainer,
-  HeaderLinksList,
-  HeaderLink
-} from './styles'
+import { HeaderContainer, HeaderLinksList, HeaderLink } from './styles'
 
 const Header = () => (
   <HeaderContainer className="container">
-    <HeaderLogo src={logo} alt="Logo" />
+    <h1>Logo</h1>
     <nav>
       <HeaderLinksList>
         <li>
@@ -34,7 +28,7 @@ const Header = () => (
     </nav>
     <div>
       <HeaderLink>Entrar</HeaderLink>
-      <Button text="Registrar-se" />
+      <Button color="orange" text="Registrar-se" />
     </div>
   </HeaderContainer>
 )

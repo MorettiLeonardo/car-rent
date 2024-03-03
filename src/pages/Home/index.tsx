@@ -1,8 +1,13 @@
 import Header from '../../components/Header'
+import Hero from '../../components/Hero'
+import { HomeContainer } from './styles'
 
 const Home = () => (
   <>
-    <Header />
+    <HomeContainer>
+      <Header />
+      <Hero />
+    </HomeContainer>
   </>
 )
 

@@ -1,4 +1,12 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+
+export const colors = {
+  white: '#fff',
+  black: '#000',
+  gray: '#717482',
+  orange: '#ff4d30',
+  bgColor: '#f8f8f8'
+}
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,15 +21,17 @@ const GlobalStyle = createGlobalStyle`
     max-width: 1330px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+  }
+
+  .isOrange {
+    color: ${colors.orange};
   }
 `
 
-export const colors = {
-  white: '#fff',
-  black: '#000',
-  gray: '#717482',
-  orange: '#ff4d30',
-  bgColor: '#f8f8f8'
-}
+export const DefaultParagraph = styled.p`
+  color: ${colors.gray};
+  font-size: 16px;
+`
 
 export default GlobalStyle

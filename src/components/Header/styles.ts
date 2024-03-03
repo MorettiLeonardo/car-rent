@@ -1,20 +1,22 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 
-export const HeaderLogo = styled.img`
-  max-width: 80px;
-`
-
 export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 32px 0;
+  position: absolute;
+  z-index: 1;
 
   div {
     display: flex;
     align-items: center;
     gap: 16px;
+  }
+
+  button {
+    font-size: 14px;
   }
 `
 
