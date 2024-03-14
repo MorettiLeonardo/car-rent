@@ -1,35 +1,37 @@
 import Button from '../Button'
-import { HeaderContainer, HeaderLinksList, HeaderLink } from './styles'
+import { HeaderContainer, HeaderLinksList, HeaderLink, Buttons } from './styles'
 
 const Header = () => (
   <HeaderContainer className="container">
     <h1>Logo</h1>
     <nav>
       <HeaderLinksList>
-        <li>
-          <HeaderLink>Inicio</HeaderLink>
-        </li>
-        <li>
-          <HeaderLink>Sobre</HeaderLink>
-        </li>
-        <li>
-          <HeaderLink>Modelo dos Veículos</HeaderLink>
-        </li>
-        <li>
-          <HeaderLink>Depoimentos</HeaderLink>
-        </li>
-        <li>
-          <HeaderLink>Nosso Time</HeaderLink>
-        </li>
-        <li>
-          <HeaderLink>Contato</HeaderLink>
-        </li>
+        <HeaderLinksList>
+          <li>
+            <HeaderLink>Inicio</HeaderLink>
+          </li>
+          <li>
+            <HeaderLink>Sobre</HeaderLink>
+          </li>
+          <li>
+            <HeaderLink>Modelo dos Veículos</HeaderLink>
+          </li>
+          <li>
+            <HeaderLink>Depoimentos</HeaderLink>
+          </li>
+          <li>
+            <HeaderLink>Nosso Time</HeaderLink>
+          </li>
+          <li>
+            <HeaderLink>Contato</HeaderLink>
+          </li>
+        </HeaderLinksList>
       </HeaderLinksList>
     </nav>
-    <div>
+    <Buttons>
       <HeaderLink>Entrar</HeaderLink>
       <Button color="orange" text="Registrar-se" />
-    </div>
+    </Buttons>
   </HeaderContainer>
 )
 
