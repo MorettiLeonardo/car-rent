@@ -7,6 +7,7 @@ import Passat from '../../assets/images/Cars/passatcc.jpg'
 
 export const CAR_DATA = [
   {
+    id: 1,
     name: 'VW Golf 6',
     price: '185',
     img: Golf6,
@@ -20,6 +21,7 @@ export const CAR_DATA = [
   },
 
   {
+    id: 2,
     name: 'Audi A1 S-Line',
     price: '225',
     img: AudiA1,
@@ -33,6 +35,7 @@ export const CAR_DATA = [
   },
 
   {
+    id: 3,
     name: 'Toyota Camry',
     price: '150',
     img: Toyota,
@@ -46,6 +49,7 @@ export const CAR_DATA = [
   },
 
   {
+    id: 4,
     name: 'BMW 320 ModernLine',
     price: '175',
     img: Bmw320,
@@ -59,6 +63,7 @@ export const CAR_DATA = [
   },
 
   {
+    id: 5,
     name: 'Mercedes-Benz GLK',
     price: '250',
     img: Benz,
@@ -72,6 +77,7 @@ export const CAR_DATA = [
   },
 
   {
+    id: 6,
     name: 'VW Passat CC',
     price: '125',
     img: Passat,
