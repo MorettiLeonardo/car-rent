@@ -10,7 +10,7 @@ export const BookContainer = styled.div`
   margin-top: 150px;
   background-image: url(${bg});
   background-color: ${colors.white};
-  padding: 16px;
+  padding: 50px 50px 60px 50px;
   border-radius: 4px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 `
