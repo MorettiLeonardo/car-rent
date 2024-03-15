@@ -1,3 +1,4 @@
+import Banner from '../../components/Banner'
 import BookContent from '../../components/BookContent'
 import Header from '../../components/Header'
 import Hero from '../../components/Hero'
@@ -13,6 +14,7 @@ const Home = () => (
       <BookContent />
       <PlanTrip />
       <PickCar />
+      <Banner />
     </HomeContainer>
   </>
 )
