@@ -5,7 +5,8 @@ export const colors = {
   black: '#000',
   gray: '#717482',
   orange: '#ff4d30',
-  bgColor: '#f8f8f8'
+  bgColor: '#f8f8f8',
+  borderColor: '#ccc'
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -15,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
     list-style: none;
+  }
+
+  body {
+    background-color: ${colors.bgColor};
   }
 
   .container {
