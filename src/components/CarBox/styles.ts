@@ -3,6 +3,7 @@ import { colors } from '../../styles'
 
 export const Container = styled.div`
   max-width: 400px;
+  width: 100%;
 
   button {
     width: 100%;
@@ -30,19 +31,40 @@ export const CarInfo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 10%;
+  gap: 5%;
   border: 2px solid ${colors.gray};
   border-top: none;
   padding: 8px;
   color: ${colors.gray};
+  width: 100%;
 
   p {
     width: 50%;
     text-align: center;
   }
 
-  div {
+  /* div {
     height: 20px;
     border-right: 2px solid ${colors.gray};
+  } */
+`
+
+export const CarImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 500px;
+    height: 327px;
+    /* object-fit: cover; */
   }
+`
+
+export const Loader = styled.div`
+  width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `

@@ -45,12 +45,6 @@ export const ButtonsContainer = styled.div`
   gap: 8px;
 `
 
-export const CarImage = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
 export const Button = styled.button`
   border: none;
   background-color: ${colors.lightGrey};
@@ -59,6 +53,7 @@ export const Button = styled.button`
   padding: 14px;
   cursor: pointer;
   transform: 0.4s;
+  width: 300px;
 
   &:hover {
     color: ${colors.white};
