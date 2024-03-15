@@ -7,7 +7,7 @@ export const BookContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 130px;
+  margin-top: 150px;
   background-image: url(${bg});
   background-color: ${colors.white};
   padding: 16px;
