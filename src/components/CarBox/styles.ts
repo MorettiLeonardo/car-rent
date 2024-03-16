@@ -42,11 +42,6 @@ export const CarInfo = styled.div`
     width: 50%;
     text-align: center;
   }
-
-  /* div {
-    height: 20px;
-    border-right: 2px solid ${colors.gray};
-  } */
 `
 
 export const CarImage = styled.div`

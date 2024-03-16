@@ -1,5 +1,6 @@
 import Banner from '../../components/Banner'
 import BookContent from '../../components/BookContent'
+import ChooseUs from '../../components/ChooseUs'
 import Header from '../../components/Header'
 import Hero from '../../components/Hero'
 import PickCar from '../../components/PickCar'
@@ -15,6 +16,7 @@ const Home = () => (
       <PlanTrip />
       <PickCar />
       <Banner />
+      <ChooseUs />
     </HomeContainer>
   </>
 )
