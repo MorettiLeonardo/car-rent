@@ -6,8 +6,7 @@ export const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
-  padding-bottom: 1000px;
+  padding-top: 200px;
 
   > h4 {
     font-size: 24px;
