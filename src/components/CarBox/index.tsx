@@ -25,7 +25,7 @@ const CarBox = ({ carData }: Props) => {
   const [carLoad, setCarLoad] = useState(true)
   setTimeout(() => {
     setCarLoad(false)
-  }, 300)
+  }, 100)
 
   return (
     <>

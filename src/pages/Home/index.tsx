@@ -5,6 +5,7 @@ import Header from '../../components/Header'
 import Hero from '../../components/Hero'
 import PickCar from '../../components/PickCar'
 import PlanTrip from '../../components/PlanTrip'
+import Testimonials from '../../components/Testimonials'
 import { HomeContainer } from './styles'
 
 const Home = () => (
@@ -17,6 +18,7 @@ const Home = () => (
       <PickCar />
       <Banner />
       <ChooseUs />
+      <Testimonials />
     </HomeContainer>
   </>
 )
