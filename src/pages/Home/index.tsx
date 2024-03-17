@@ -2,6 +2,7 @@ import Banner from '../../components/Banner'
 import BookContent from '../../components/BookContent'
 import ChooseUs from '../../components/ChooseUs'
 import Faq from '../../components/Faq'
+import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import Hero from '../../components/Hero'
 import PickCar from '../../components/PickCar'
@@ -21,6 +22,7 @@ const Home = () => (
       <ChooseUs />
       <Testimonials />
       <Faq />
+      <Footer />
     </HomeContainer>
   </>
 )

@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
     list-style: none;
+    text-decoration: none;
     scrollbar-color: ${colors.orange} ${colors.white};
     scrollbar-width: thin;
   }

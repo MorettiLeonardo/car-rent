@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Container, QuestionsContainer } from './styles'
-import { arrow } from '../../assets/svg/arrow'
+import { arrow } from '../../assets/svg/path'
 
 const Faq = () => {
   const [question1, setQuestion1] = useState(false)

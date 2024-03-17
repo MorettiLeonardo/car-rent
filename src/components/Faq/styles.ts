@@ -4,7 +4,6 @@ import { colors } from '../../styles'
 export const Container = styled.div`
   text-align: center;
   padding-top: 200px;
-  padding-bottom: 10000px;
 
   > h4 {
     font-size: 24px;
@@ -47,6 +46,7 @@ export const QuestionsContainer = styled.div`
   }
 
   h4 {
+    transition: 0.3s;
     display: flex;
     justify-content: space-between;
     align-items: center;
