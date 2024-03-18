@@ -18,7 +18,10 @@ const Home = () => (
       <BookContent />
       <PlanTrip />
       <PickCar />
-      <Banner />
+      <Banner
+        title="Economize com nosso aluguel de carros mais barato!"
+        text="Principais Aeroportos. Fornecedores Locais. Suporte 24/7."
+      />
       <ChooseUs />
       <Testimonials />
       <Faq />

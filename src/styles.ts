@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import overlayImage from './assets/images/overlay_image.png'
 
 export const colors = {
   white: '#fff',
@@ -43,6 +44,17 @@ const GlobalStyle = createGlobalStyle`
 export const DefaultParagraph = styled.p`
   color: ${colors.gray};
   font-size: 16px;
+`
+
+export const Overlay = styled.div`
+  position: absolute;
+  background-image: url(${overlayImage});
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
 `
 
 export default GlobalStyle

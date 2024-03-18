@@ -22,7 +22,7 @@ export const FormGroup = styled.form`
 
   button {
     padding: 0;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 `
 

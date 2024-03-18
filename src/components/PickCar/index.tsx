@@ -25,7 +25,11 @@ const PickCar = () => {
       <PickContainer>
         <ButtonsContainer>
           {CAR_DATA.map((car) => (
-            <Button onClick={() => setCurrentCar(car.name)} key={car.id}>
+            <Button
+              className={car.name === currentCar ? 'is-selected' : ''}
+              onClick={() => setCurrentCar(car.name)}
+              key={car.id}
+            >
               {car.name}
             </Button>
           ))}

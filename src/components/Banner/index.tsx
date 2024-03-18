@@ -1,13 +1,16 @@
 import { BannerContainer } from './styles'
 
-const Banner = () => (
+type Props = {
+  title: string
+  text: string
+  isOrange?: boolean
+}
+
+const Banner = ({ text, title, isOrange }: Props) => (
   <BannerContainer>
     <div className="container">
-      <h2>Economize com nosso aluguel de carros mais barato!</h2>
-      <h3>
-        Principais Aeroportos. Fornecedores Locais. Suporte
-        <span className="isOrange"> 24/7</span>.
-      </h3>
+      <h2>{title}</h2>
+      <h3 className={isOrange ? 'isOrange' : ''}>{text}</h3>
     </div>
   </BannerContainer>
 )

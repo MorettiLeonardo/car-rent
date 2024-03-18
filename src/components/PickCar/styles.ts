@@ -52,10 +52,11 @@ export const Button = styled.button`
   font-weight: 500;
   padding: 14px;
   cursor: pointer;
-  transform: 0.4s;
+  transition: 0.3s;
   width: 300px;
 
-  &:hover {
+  &:hover,
+  &.is-selected {
     color: ${colors.white};
     background-color: ${colors.orange};
   }
