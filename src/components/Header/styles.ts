@@ -5,7 +5,6 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 32px 0; */
   position: absolute;
   z-index: 1;
 
@@ -29,9 +28,6 @@ export const Buttons = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
-  @media (max-width: 1100px) {
-    display: none;
-  }
 `
 
 export const HeaderLinksList = styled.ul`
@@ -43,6 +39,7 @@ export const HeaderLink = styled.span`
   font-weight: 500;
   cursor: pointer;
   transition: 0.4s;
+  color: ${colors.black};
 
   &:hover {
     color: ${colors.orange};

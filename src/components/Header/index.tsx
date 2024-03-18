@@ -2,20 +2,25 @@ import Button from '../Button'
 import { HeaderContainer, HeaderLinksList, HeaderLink, Buttons } from './styles'
 
 import logo from '../../assets/images/logo.png'
+import { Link } from 'react-router-dom'
 
 const Header = () => (
   <HeaderContainer className="container">
-    <a href="">
+    <Link to={'/'}>
       <img src={logo} alt="" />
-    </a>
+    </Link>
     <nav>
       <HeaderLinksList>
         <HeaderLinksList>
           <li>
-            <HeaderLink>Inicio</HeaderLink>
+            <Link to={'/'}>
+              <HeaderLink>Inicio</HeaderLink>
+            </Link>
           </li>
           <li>
-            <HeaderLink>Sobre</HeaderLink>
+            <Link to={'/about'}>
+              <HeaderLink>Sobre</HeaderLink>
+            </Link>
           </li>
           <li>
             <HeaderLink>Modelo dos Veículos</HeaderLink>
