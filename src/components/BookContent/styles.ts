@@ -15,7 +15,7 @@ export const BookContainer = styled.div`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 `
 
-export const Group = styled.div`
+export const FormGroup = styled.form`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10%;
@@ -37,6 +37,10 @@ export const InputGroup = styled.div`
     padding: 14px;
     border: 1px solid ${colors.borderColor};
     border-radius: 4px;
+
+    &.error {
+      border: 1px solid red;
+    }
   }
 
   label {
