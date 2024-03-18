@@ -1,9 +1,13 @@
 import Button from '../Button'
 import { HeaderContainer, HeaderLinksList, HeaderLink, Buttons } from './styles'
 
+import logo from '../../assets/images/logo.png'
+
 const Header = () => (
   <HeaderContainer className="container">
-    <h1>Logo</h1>
+    <a href="">
+      <img src={logo} alt="" />
+    </a>
     <nav>
       <HeaderLinksList>
         <HeaderLinksList>

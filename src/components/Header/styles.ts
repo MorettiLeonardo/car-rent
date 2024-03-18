@@ -5,7 +5,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 0;
+  /* padding: 32px 0; */
   position: absolute;
   z-index: 1;
 
@@ -17,6 +17,11 @@ export const HeaderContainer = styled.header`
 
   button {
     font-size: 14px;
+  }
+
+  img {
+    max-width: 120px;
+    padding: 0;
   }
 `
 
