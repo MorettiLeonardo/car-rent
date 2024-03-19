@@ -3,6 +3,7 @@ import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import PlanTrip from '../../components/PlanTrip'
+
 import { Overlay } from '../../styles'
 
 const About = () => (

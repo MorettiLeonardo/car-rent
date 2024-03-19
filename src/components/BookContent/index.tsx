@@ -1,8 +1,11 @@
 import { useFormik } from 'formik'
-import Button from '../Button'
-import { CAR_DATA } from '../CarData'
-import { BookContainer, FormGroup, InputGroup } from './styles'
 import * as Yup from 'yup'
+
+import { CAR_DATA } from '../CarData'
+
+import Button from '../Button'
+
+import * as S from './styles'
 
 const BookContent = () => {
   const form = useFormik({
@@ -28,10 +31,10 @@ const BookContent = () => {
   }
 
   return (
-    <BookContainer className="container">
+    <S.BookContainer className="container">
       <h2>Alguar um carro</h2>
-      <FormGroup onSubmit={form.handleSubmit}>
-        <InputGroup>
+      <S.FormGroup onSubmit={form.handleSubmit}>
+        <S.InputGroup>
           <label htmlFor="carType">
             Selecione a marca do carro <span className="isOrange">*</span>
           </label>
@@ -50,8 +53,8 @@ const BookContent = () => {
               </option>
             ))}
           </select>
-        </InputGroup>
-        <InputGroup>
+        </S.InputGroup>
+        <S.InputGroup>
           <label htmlFor="pickUp">
             Retirada <span className="isOrange">*</span>
           </label>
@@ -64,8 +67,8 @@ const BookContent = () => {
             value={form.values.pickUp}
             className={checkInputHasError('pickUp') ? 'error' : ''}
           />
-        </InputGroup>
-        <InputGroup>
+        </S.InputGroup>
+        <S.InputGroup>
           <label htmlFor="pickOff">
             Devolução <span className="isOrange">*</span>
           </label>
@@ -78,10 +81,10 @@ const BookContent = () => {
             value={form.values.pickOff}
             className={checkInputHasError('pickOff') ? 'error' : ''}
           />
-        </InputGroup>
+        </S.InputGroup>
         <Button color="orange" text="Buscar" type="submit" />
-      </FormGroup>
-    </BookContainer>
+      </S.FormGroup>
+    </S.BookContainer>
   )
 }
 

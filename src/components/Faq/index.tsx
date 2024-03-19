@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import { Container, QuestionsContainer } from './styles'
+
 import { arrow } from '../../assets/svg/path'
+
+import * as S from './styles'
 
 const Faq = () => {
   const [question1, setQuestion1] = useState(false)
@@ -9,14 +11,14 @@ const Faq = () => {
 
   return (
     <section>
-      <Container className="container">
+      <S.Container className="container">
         <h4>FAQ</h4>
         <h2>Perguntas frequentes</h2>
         <p>
           Perguntas frequentes sobre o processo de reserva de aluguel de carro
           em nosso site: respostas a dúvidas e preocupações comuns.
         </p>
-        <QuestionsContainer>
+        <S.QuestionsContainer>
           <ul>
             <li onClick={() => setQuestion1(!question1)}>
               <h4 className={question1 ? 'is-selected' : ''}>
@@ -69,8 +71,8 @@ const Faq = () => {
               </p>
             </li>
           </ul>
-        </QuestionsContainer>
-      </Container>
+        </S.QuestionsContainer>
+      </S.Container>
     </section>
   )
 }

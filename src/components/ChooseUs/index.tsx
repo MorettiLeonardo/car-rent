@@ -2,21 +2,16 @@ import chooseUsImg from '../../assets/images/ChooseUs/choose_us_car.png'
 import car from '../../assets/images/ChooseUs/choose_car.png'
 import coin from '../../assets/images/ChooseUs/choose_coin.png'
 import coinHand from '../../assets/images/ChooseUs/choose_coin_hand.png'
+
 import Button from '../Button'
-import {
-  Card,
-  CartContainer,
-  CartContent,
-  Container,
-  Infos,
-  WhyChooseUs
-} from './styles'
+
+import * as S from './styles'
 
 const ChooseUs = () => (
-  <Container className="container">
+  <S.Container className="container">
     <img src={chooseUsImg} alt="Escolha a gente" />
-    <Infos>
-      <WhyChooseUs>
+    <S.Infos>
+      <S.WhyChooseUs>
         <h4>Por que escolher a gente</h4>
         <h2>As melhores ofertas e custo-benefício que você encontrará.</h2>
         <p>
@@ -26,42 +21,42 @@ const ChooseUs = () => (
           de alta qualidade sem gastar muito.
         </p>
         <Button color="orange" text="Saiba mais" />
-      </WhyChooseUs>
-      <CartContainer>
-        <Card>
+      </S.WhyChooseUs>
+      <S.CartContainer>
+        <S.Card>
           <img src={car} alt="Carro" />
-          <CartContent>
+          <S.CartContent>
             <h4>Viagem de Carro pelo País</h4>
             <p>
               Eleve sua experiência de condução ao próximo nível com nossos
               veículos de primeira linha para suas aventuras de viagem pelo
               país.
             </p>
-          </CartContent>
-        </Card>
-        <Card>
+          </S.CartContent>
+        </S.Card>
+        <S.Card>
           <img src={coin} alt="Moeda" />
-          <CartContent>
+          <S.CartContent>
             <h4>Preços tudo incluído</h4>
             <p>
               Obtenha tudo o que você precisa em um preço conveniente e
               transparente com nossa política de preços tudo incluído.
             </p>
-          </CartContent>
-        </Card>
-        <Card>
+          </S.CartContent>
+        </S.Card>
+        <S.Card>
           <img src={coinHand} alt="Moeda em uma mão" />
-          <CartContent>
+          <S.CartContent>
             <h4>Sem taxas ocultas.</h4>
             <p>
               Tenha tranquilidade com nossa política de sem taxas ocultas.
               Acreditamos em preços transparentes e honestos.
             </p>
-          </CartContent>
-        </Card>
-      </CartContainer>
-    </Infos>
-  </Container>
+          </S.CartContent>
+        </S.Card>
+      </S.CartContainer>
+    </S.Infos>
+  </S.Container>
 )
 
 export default ChooseUs

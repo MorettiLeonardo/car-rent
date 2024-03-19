@@ -1,16 +1,11 @@
 import { path } from '../../assets/svg/path'
 import harry from '../../assets/images/Testimonials/harry_potter.jpg'
 import ron from '../../assets/images/Testimonials/ron.jpg'
-import {
-  Card,
-  Container,
-  TestimonialsContainer,
-  Profile,
-  ProfileContent
-} from './styles'
+
+import * as S from './styles'
 
 const Testimonials = () => (
-  <Container className="container">
+  <S.Container className="container">
     <h4>Avaliado por pessoas</h4>
     <h2>Depoimentos de Clientes</h2>
     <p>
@@ -18,14 +13,14 @@ const Testimonials = () => (
       depoimentos. Nossos clientes experimentaram nossos serviços e resultados e
       estão ansiosos para compartilhar suas experiências positivas com você.
     </p>
-    <TestimonialsContainer>
-      <Card>
+    <S.TestimonialsContainer>
+      <S.Card>
         <p>
           Alugamos um carro neste site e tivemos uma experiência incrível! A
           reserva foi fácil e as tarifas de aluguel eram muito acessíveis.
         </p>
-        <Profile>
-          <ProfileContent>
+        <S.Profile>
+          <S.ProfileContent>
             <img src={harry} alt="Harry Potter" />
             <div>
               <p>
@@ -33,17 +28,17 @@ const Testimonials = () => (
               </p>
               <p>Curitiba, PR</p>
             </div>
-          </ProfileContent>
+          </S.ProfileContent>
           <span className="isOrange">{path}</span>
-        </Profile>
-      </Card>
-      <Card>
+        </S.Profile>
+      </S.Card>
+      <S.Card>
         <p>
           Alugamos um carro neste site e tivemos uma experiência incrível! A
           reserva foi fácil e as tarifas de aluguel eram muito acessíveis.
         </p>
-        <Profile>
-          <ProfileContent>
+        <S.Profile>
+          <S.ProfileContent>
             <img src={ron} alt="" />
             <div>
               <p>
@@ -51,12 +46,12 @@ const Testimonials = () => (
               </p>
               <p>São José, PR</p>
             </div>
-          </ProfileContent>
+          </S.ProfileContent>
           <span className="isOrange">{path}</span>
-        </Profile>
-      </Card>
-    </TestimonialsContainer>
-  </Container>
+        </S.Profile>
+      </S.Card>
+    </S.TestimonialsContainer>
+  </S.Container>
 )
 
 export default Testimonials

@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import Button from '../Button'
-import { RentPerDay, Container, CarInfo, CarImage, Loader } from './styles'
-import { colors } from '../../styles'
 import { ClipLoader } from 'react-spinners'
+
+import Button from '../Button'
+
+import { colors } from '../../styles'
+import * as S from './styles'
 
 type Car = {
   name: string
@@ -29,11 +31,11 @@ const CarBox = ({ carData }: Props) => {
 
   return (
     <>
-      <CarImage>
+      <S.CarImage>
         {carLoad ? (
-          <Loader className="is-loading">
+          <S.Loader className="is-loading">
             <ClipLoader color={colors.orange} />
-          </Loader>
+          </S.Loader>
         ) : (
           <img
             style={{ display: carLoad ? 'none' : 'block' }}
@@ -42,50 +44,50 @@ const CarBox = ({ carData }: Props) => {
             onLoad={() => setCarLoad(false)}
           />
         )}
-      </CarImage>
-      <Container>
-        <RentPerDay>
+      </S.CarImage>
+      <S.Container>
+        <S.RentPerDay>
           <span>R$ {carData.price}</span> / alugel por dia
-        </RentPerDay>
+        </S.RentPerDay>
         <div>
-          <CarInfo>
+          <S.CarInfo>
             <p>Modelo</p>
             <div></div>
             <p>{carData.model}</p>
-          </CarInfo>
-          <CarInfo>
+          </S.CarInfo>
+          <S.CarInfo>
             <p>Marca</p>
             <div></div>
             <p>{carData.mark}</p>
-          </CarInfo>
-          <CarInfo>
+          </S.CarInfo>
+          <S.CarInfo>
             <p>Ano</p>
             <div></div>
             <p>{carData.year}</p>
-          </CarInfo>
-          <CarInfo>
+          </S.CarInfo>
+          <S.CarInfo>
             <p>Portas</p>
             <div></div>
             <p>{carData.doors}</p>
-          </CarInfo>
-          <CarInfo>
+          </S.CarInfo>
+          <S.CarInfo>
             <p>AC</p>
             <div></div>
             <p>{carData.air}</p>
-          </CarInfo>
-          <CarInfo>
+          </S.CarInfo>
+          <S.CarInfo>
             <p>Transmissão</p>
             <div></div>
             <p>{carData.transmission}</p>
-          </CarInfo>
-          <CarInfo>
+          </S.CarInfo>
+          <S.CarInfo>
             <p>Combustível</p>
             <div></div>
             <p>{carData.fuel}</p>
-          </CarInfo>
+          </S.CarInfo>
         </div>
         <Button color="orange" text="Reservar agora" />
-      </Container>
+      </S.Container>
     </>
   )
 }

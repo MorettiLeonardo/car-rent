@@ -2,7 +2,7 @@ import car from '../../assets/images/PlanTrip/select_car.png'
 import drive from '../../assets/images/PlanTrip/lets_drive.png'
 import contact from '../../assets/images/PlanTrip/contact_operator.png'
 
-import { CardContainer, Card, Container } from './styles'
+import * as S from './styles'
 
 const CardData = [
   {
@@ -29,21 +29,21 @@ const CardData = [
 ]
 
 const PlanTrip = () => (
-  <Container className="container">
+  <S.Container className="container">
     <h3>Planeje sua viagem agora</h3>
     <h2>Aluguel de carro rápido e fácil</h2>
-    <CardContainer>
+    <S.CardContainer>
       {CardData.map((card) => (
         <li key={card.id}>
-          <Card>
+          <S.Card>
             <img src={card.img} alt={card.title} />
             <h4>{card.title}</h4>
             <p>{card.description}</p>
-          </Card>
+          </S.Card>
         </li>
       ))}
-    </CardContainer>
-  </Container>
+    </S.CardContainer>
+  </S.Container>
 )
 
 export default PlanTrip

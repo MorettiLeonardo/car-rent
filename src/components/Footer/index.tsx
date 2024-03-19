@@ -1,13 +1,13 @@
-import Button from '../Button'
-
 import { letter, phone } from '../../assets/svg/path'
 
-import { Container, Infos, ListInfos, ContactInfo } from './styles'
+import Button from '../Button'
+
+import * as S from './styles'
 
 const Footer = () => (
   <footer className="container">
-    <Container>
-      <Infos>
+    <S.Container>
+      <S.Infos>
         <h3>
           Rent <span>Wheels</span>
         </h3>
@@ -16,18 +16,18 @@ const Footer = () => (
           necessidades de condução. Temos o carro perfeito para atender às suas
           necessidades.
         </p>
-        <ContactInfo>
+        <S.ContactInfo>
           <p>
             <span>{phone}</span> (12) 91234-5678
           </p>
           <p>
             <span>{letter}</span> rentwheels@email.com
           </p>
-        </ContactInfo>
-      </Infos>
-      <Infos>
+        </S.ContactInfo>
+      </S.Infos>
+      <S.Infos>
         <h3>EMPRESA</h3>
-        <ListInfos>
+        <S.ListInfos>
           <li>
             <a href="#">Curitiba</a>
           </li>
@@ -40,11 +40,11 @@ const Footer = () => (
           <li>
             <a href="#">Como nós trabalhamos</a>
           </li>
-        </ListInfos>
-      </Infos>
-      <Infos>
+        </S.ListInfos>
+      </S.Infos>
+      <S.Infos>
         <h3>JORNADA DE TRABALHO</h3>
-        <ListInfos>
+        <S.ListInfos>
           <li>
             <a href="#">Seg - Sex: 09:00 - 21:00</a>
           </li>
@@ -54,9 +54,9 @@ const Footer = () => (
           <li>
             <a href="#">Domingo - Fechado</a>
           </li>
-        </ListInfos>
-      </Infos>
-      <Infos>
+        </S.ListInfos>
+      </S.Infos>
+      <S.Infos>
         <h3>Assine</h3>
         <p>
           Assine seu endereço de e-mail para receber as últimas notícias e
@@ -64,8 +64,8 @@ const Footer = () => (
         </p>
         <input type="text" placeholder="E-mail" />
         <Button color="orange" text="Enviar" />
-      </Infos>
-    </Container>
+      </S.Infos>
+    </S.Container>
   </footer>
 )
 

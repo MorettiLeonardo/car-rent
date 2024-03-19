@@ -1,47 +1,49 @@
-import Button from '../Button'
-import { HeaderContainer, HeaderLinksList, HeaderLink, Buttons } from './styles'
-
-import logo from '../../assets/images/logo.png'
 import { Link } from 'react-router-dom'
 
+import logo from '../../assets/images/logo.png'
+
+import Button from '../Button'
+
+import * as S from './styles'
+
 const Header = () => (
-  <HeaderContainer className="container">
+  <S.HeaderContainer className="container">
     <Link to={'/'}>
       <img src={logo} alt="" />
     </Link>
     <nav>
-      <HeaderLinksList>
-        <HeaderLinksList>
+      <S.HeaderLinksList>
+        <S.HeaderLinksList>
           <li>
             <Link to={'/'}>
-              <HeaderLink>Inicio</HeaderLink>
+              <S.HeaderLink>Inicio</S.HeaderLink>
             </Link>
           </li>
           <li>
             <Link to={'/about'}>
-              <HeaderLink>Sobre</HeaderLink>
+              <S.HeaderLink>Sobre</S.HeaderLink>
             </Link>
           </li>
           <li>
-            <HeaderLink>Modelo dos Veículos</HeaderLink>
+            <S.HeaderLink>Modelo dos Veículos</S.HeaderLink>
           </li>
           <li>
-            <HeaderLink>Depoimentos</HeaderLink>
+            <S.HeaderLink>Depoimentos</S.HeaderLink>
           </li>
           <li>
-            <HeaderLink>Nosso Time</HeaderLink>
+            <S.HeaderLink>Nosso Time</S.HeaderLink>
           </li>
           <li>
-            <HeaderLink>Contato</HeaderLink>
+            <S.HeaderLink>Contato</S.HeaderLink>
           </li>
-        </HeaderLinksList>
-      </HeaderLinksList>
+        </S.HeaderLinksList>
+      </S.HeaderLinksList>
     </nav>
-    <Buttons>
-      <HeaderLink>Entrar</HeaderLink>
+    <S.Buttons>
+      <S.HeaderLink>Entrar</S.HeaderLink>
       <Button color="orange" text="Registrar-se" />
-    </Buttons>
-  </HeaderContainer>
+    </S.Buttons>
+  </S.HeaderContainer>
 )
 
 export default Header

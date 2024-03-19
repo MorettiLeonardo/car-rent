@@ -1,15 +1,16 @@
 import heroBg from '../../assets/images/hero-bg.png'
 import mainCar from '../../assets/images/main-car.png'
-import { DefaultParagraph } from '../../styles'
+
 import Button from '../Button'
 
-import { HeroBgImage, HeroContainer, HeroContent, MainCar } from './styles'
+import { DefaultParagraph } from '../../styles'
+import * as S from './styles'
 
 const Hero = () => (
   <>
-    <HeroBgImage src={heroBg} />
-    <HeroContainer className="container">
-      <HeroContent>
+    <S.HeroBgImage src={heroBg} />
+    <S.HeroContainer className="container">
+      <S.HeroContent>
         <h4>Planeje sua viagem agora</h4>
         <h1>
           Economize <span className="isOrange">muito</span> com nosso aluguel de
@@ -23,9 +24,9 @@ const Hero = () => (
           <Button padding="24px" color="orange" text="Reservar Viagem" />
           <Button color="black" text="Ver mais" />
         </div>
-      </HeroContent>
-      <MainCar src={mainCar} />
-    </HeroContainer>
+      </S.HeroContent>
+      <S.MainCar src={mainCar} />
+    </S.HeroContainer>
   </>
 )
 
