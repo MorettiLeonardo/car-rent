@@ -5,6 +5,13 @@ import Bmw320 from '../../assets/images/Cars/bmw320.jpg'
 import Benz from '../../assets/images/Cars/benz.jpg'
 import Passat from '../../assets/images/Cars/passatcc.jpg'
 
+import BoxGolf6 from '../../assets/images/VehicleModels/golf6-box.png'
+import BoxAudiA1 from '../../assets/images/VehicleModels/audi-box.png'
+import BoxToyota from '../../assets/images/VehicleModels/toyota-box.png'
+import BoxBmw320 from '../../assets/images/VehicleModels/bmw-box.png'
+import BoxBenz from '../../assets/images/VehicleModels/benz-box.png'
+import BoxPassat from '../../assets/images/VehicleModels/passat-box.png'
+
 export const CAR_DATA = [
   {
     id: 1,
@@ -17,6 +24,7 @@ export const CAR_DATA = [
     doors: '4/5',
     air: 'Sim',
     transmission: 'Manual',
+    box: BoxGolf6,
     fuel: 'Diesel'
   },
 
@@ -31,6 +39,7 @@ export const CAR_DATA = [
     doors: '4/5',
     air: 'Sim',
     transmission: 'Manual',
+    box: BoxAudiA1,
     fuel: 'Gasolina'
   },
 
@@ -45,6 +54,7 @@ export const CAR_DATA = [
     doors: '4/5',
     air: 'Sim',
     transmission: 'Automático',
+    box: BoxToyota,
     fuel: 'Flex'
   },
 
@@ -59,6 +69,7 @@ export const CAR_DATA = [
     doors: '4/5',
     air: 'Sim',
     transmission: 'Manual',
+    box: BoxBmw320,
     fuel: 'Diesel'
   },
 
@@ -73,6 +84,7 @@ export const CAR_DATA = [
     doors: '4/5',
     air: 'Sim',
     transmission: 'Manual',
+    box: BoxBenz,
     fuel: 'Diesel'
   },
 
@@ -87,6 +99,7 @@ export const CAR_DATA = [
     doors: '4/5',
     air: 'Sim',
     transmission: 'Automático',
+    box: BoxPassat,
     fuel: 'Gasolina'
   }
 ]

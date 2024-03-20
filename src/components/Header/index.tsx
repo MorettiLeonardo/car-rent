@@ -25,7 +25,9 @@ const Header = () => (
             </Link>
           </li>
           <li>
-            <S.HeaderLink>Modelo dos Veículos</S.HeaderLink>
+            <Link to={'/vehicle-models'}>
+              <S.HeaderLink>Modelo dos Veículos</S.HeaderLink>
+            </Link>
           </li>
           <li>
             <S.HeaderLink>Depoimentos</S.HeaderLink>
