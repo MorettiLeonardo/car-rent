@@ -7,6 +7,7 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   padding-top: 200px;
+  padding-bottom: 150px;
 
   > h4 {
     font-size: 24px;

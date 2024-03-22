@@ -3,7 +3,6 @@ import { colors } from '../../styles'
 
 export const Container = styled.div`
   text-align: center;
-  padding: 200px 0;
 
   > h4 {
     font-size: 24px;

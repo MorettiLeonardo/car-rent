@@ -30,7 +30,9 @@ const Header = () => (
             </Link>
           </li>
           <li>
-            <S.HeaderLink>Depoimentos</S.HeaderLink>
+            <Link to={'/testimonials'}>
+              <S.HeaderLink>Depoimentos</S.HeaderLink>
+            </Link>
           </li>
           <li>
             <S.HeaderLink>Nosso Time</S.HeaderLink>
