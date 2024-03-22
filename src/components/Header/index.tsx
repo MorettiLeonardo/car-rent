@@ -40,7 +40,9 @@ const Header = () => (
             </Link>
           </li>
           <li>
-            <S.HeaderLink>Contato</S.HeaderLink>
+            <Link to={'/contact'}>
+              <S.HeaderLink>Contato</S.HeaderLink>
+            </Link>
           </li>
         </S.HeaderLinksList>
       </S.HeaderLinksList>
