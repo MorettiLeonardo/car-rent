@@ -35,7 +35,9 @@ const Header = () => (
             </Link>
           </li>
           <li>
-            <S.HeaderLink>Nosso Time</S.HeaderLink>
+            <Link to={'/team'}>
+              <S.HeaderLink>Nosso Time</S.HeaderLink>
+            </Link>
           </li>
           <li>
             <S.HeaderLink>Contato</S.HeaderLink>
