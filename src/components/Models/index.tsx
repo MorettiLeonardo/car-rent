@@ -1,212 +1,50 @@
 import Button from '../Button'
 
-import audi from '../../assets/images/VehicleModels/audi-box.png'
-import {
-  Card,
-  CardContainer,
-  RentInfo,
-  CarInfo,
-  Border,
-  CarInfoContainer,
-  Container
-} from './styles'
-import { car } from '../../assets/svg/path'
+import { CAR_DATA } from '../CarData'
+
+import { carIcon } from '../../assets/svg/path'
+
+import * as S from './styles'
 
 const Models = () => (
-  <Container className="container">
-    <Card>
-      <img src={audi} alt="" />
-      <CardContainer>
-        <RentInfo>
-          <h3>Audi</h3>
-          <div>
-            <h3>$45</h3>
-            <p>por dia</p>
-          </div>
-        </RentInfo>
-        <CarInfoContainer>
-          <CarInfo>
-            <p>
-              <span>{car}</span> Audi
-            </p>
-            <p>
-              <span>{car}</span>4/5
-            </p>
-          </CarInfo>
-          <CarInfo>
-            <p>
-              Manual<span>{car}</span>
-            </p>
-            <p>
-              Disel<span>{car}</span>
-            </p>
-          </CarInfo>
-        </CarInfoContainer>
-        <Border />
-        <Button color="orange" text="Alugar" />
-      </CardContainer>
-    </Card>
-    <Card>
-      <img src={audi} alt="" />
-      <CardContainer>
-        <RentInfo>
-          <h3>Audi</h3>
-          <div>
-            <h3>$45</h3>
-            <p>por dia</p>
-          </div>
-        </RentInfo>
-        <CarInfoContainer>
-          <CarInfo>
-            <p>
-              <span>{car}</span> Audi
-            </p>
-            <p>
-              <span>{car}</span>4/5
-            </p>
-          </CarInfo>
-          <CarInfo>
-            <p>
-              Manual<span>{car}</span>
-            </p>
-            <p>
-              Disel<span>{car}</span>
-            </p>
-          </CarInfo>
-        </CarInfoContainer>
-        <Border />
-        <Button color="orange" text="Alugar" />
-      </CardContainer>
-    </Card>
-    <Card>
-      <img src={audi} alt="" />
-      <CardContainer>
-        <RentInfo>
-          <h3>Audi</h3>
-          <div>
-            <h3>$45</h3>
-            <p>por dia</p>
-          </div>
-        </RentInfo>
-        <CarInfoContainer>
-          <CarInfo>
-            <p>
-              <span>{car}</span> Audi
-            </p>
-            <p>
-              <span>{car}</span>4/5
-            </p>
-          </CarInfo>
-          <CarInfo>
-            <p>
-              Manual<span>{car}</span>
-            </p>
-            <p>
-              Disel<span>{car}</span>
-            </p>
-          </CarInfo>
-        </CarInfoContainer>
-        <Border />
-        <Button color="orange" text="Alugar" />
-      </CardContainer>
-    </Card>
-    <Card>
-      <img src={audi} alt="" />
-      <CardContainer>
-        <RentInfo>
-          <h3>Audi</h3>
-          <div>
-            <h3>$45</h3>
-            <p>por dia</p>
-          </div>
-        </RentInfo>
-        <CarInfoContainer>
-          <CarInfo>
-            <p>
-              <span>{car}</span> Audi
-            </p>
-            <p>
-              <span>{car}</span>4/5
-            </p>
-          </CarInfo>
-          <CarInfo>
-            <p>
-              Manual<span>{car}</span>
-            </p>
-            <p>
-              Disel<span>{car}</span>
-            </p>
-          </CarInfo>
-        </CarInfoContainer>
-        <Border />
-        <Button color="orange" text="Alugar" />
-      </CardContainer>
-    </Card>
-    <Card>
-      <img src={audi} alt="" />
-      <CardContainer>
-        <RentInfo>
-          <h3>Audi</h3>
-          <div>
-            <h3>$45</h3>
-            <p>por dia</p>
-          </div>
-        </RentInfo>
-        <CarInfoContainer>
-          <CarInfo>
-            <p>
-              <span>{car}</span> Audi
-            </p>
-            <p>
-              <span>{car}</span>4/5
-            </p>
-          </CarInfo>
-          <CarInfo>
-            <p>
-              Manual<span>{car}</span>
-            </p>
-            <p>
-              Disel<span>{car}</span>
-            </p>
-          </CarInfo>
-        </CarInfoContainer>
-        <Border />
-        <Button color="orange" text="Alugar" />
-      </CardContainer>
-    </Card>
-    <Card>
-      <img src={audi} alt="" />
-      <CardContainer>
-        <RentInfo>
-          <h3>Audi</h3>
-          <div>
-            <h3>$45</h3>
-            <p>por dia</p>
-          </div>
-        </RentInfo>
-        <CarInfoContainer>
-          <CarInfo>
-            <p>
-              <span>{car}</span> Audi
-            </p>
-            <p>
-              <span>{car}</span>4/5
-            </p>
-          </CarInfo>
-          <CarInfo>
-            <p>
-              Manual<span>{car}</span>
-            </p>
-            <p>
-              Disel<span>{car}</span>
-            </p>
-          </CarInfo>
-        </CarInfoContainer>
-        <Border />
-        <Button color="orange" text="Alugar" />
-      </CardContainer>
-    </Card>
-  </Container>
+  <S.Container className="container">
+    {CAR_DATA.map((car) => (
+      <S.Card key={car.id}>
+        <img src={car.box} alt={car.name} />
+        <S.CardContainer>
+          <S.RentInfo>
+            <h3>{car.mark}</h3>
+            <div>
+              <h3>R$ {car.price}</h3>
+              <p>por dia</p>
+            </div>
+          </S.RentInfo>
+          <S.CarInfoContainer>
+            <S.CarInfo>
+              <p>
+                <span>{carIcon}</span> {car.model}
+              </p>
+              <p>
+                <span>{carIcon}</span> {car.doors}
+              </p>
+            </S.CarInfo>
+            <S.CarInfo>
+              <p>
+                {car.transmission}
+                <span>{carIcon}</span>
+              </p>
+              <p>
+                {car.fuel}
+                <span>{carIcon}</span>
+              </p>
+            </S.CarInfo>
+          </S.CarInfoContainer>
+          <S.Border />
+          <Button color="orange" text="Alugar" />
+        </S.CardContainer>
+      </S.Card>
+    ))}
+  </S.Container>
 )
 
 export default Models

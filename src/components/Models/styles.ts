@@ -2,17 +2,22 @@ import styled from 'styled-components'
 import { colors } from '../../styles'
 
 export const Container = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 80px;
+  padding-top: 250px;
 `
 
 export const Card = styled.div`
-  width: 80%;
+  max-width: 348px;
   margin: 0 auto;
   color: ${colors.gray};
 
   img {
+    max-width: 348px;
+    max-height: 270px;
+    height: 100%;
+    object-fit: cover;
     width: 100%;
     margin-bottom: -8px;
   }
@@ -34,7 +39,7 @@ export const RentInfo = styled.div`
   text-align: center;
 
   h3 {
-    font-size: 28px;
+    font-size: 24px;
     color: ${colors.black};
   }
 `
@@ -47,22 +52,24 @@ export const CarInfoContainer = styled.div`
 export const CarInfo = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 
   p {
     margin: 16px 0;
     font-weight: 500;
-    font-size: 18 px;
+    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 8px;
+    max-width: 100px;
   }
 `
 
 export const Border = styled.div`
   width: 100%;
-  border-bottom: 1px solid ${colors.gray};
   margin: 16px 0;
+  border-bottom: 1px solid ${colors.gray};
+  border-radius: 4px;
 `
