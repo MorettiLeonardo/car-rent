@@ -6,6 +6,7 @@ export const Container = styled.section`
   flex-wrap: wrap;
   row-gap: 80px;
   padding-top: 250px;
+  padding-bottom: 100px;
 `
 
 export const Card = styled.div`
