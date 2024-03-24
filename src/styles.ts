@@ -1,6 +1,13 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import overlayImage from './assets/images/overlay_image.png'
 
+export const breakpoints = {
+  desktop: '1330px',
+  notebook: '1280px',
+  tablet: '768px',
+  smartphone: '480px'
+}
+
 export const colors = {
   white: '#fff',
   black: '#000',

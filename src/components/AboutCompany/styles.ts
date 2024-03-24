@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.div`
   padding-top: 15%;
@@ -11,6 +11,17 @@ export const Container = styled.div`
   img {
     max-width: 430px;
     max-height: 430px;
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    flex-wrap: wrap;
+    text-align: center;
+    padding-top: 200px;
+
+    img {
+      padding: 20px;
+      max-width: 300px;
+    }
   }
 `
 
@@ -34,6 +45,22 @@ export const InfosContainer = styled.div`
     color: ${colors.gray};
     line-height: 24px;
   }
+
+  @media (max-width: ${breakpoints.notebook}) {
+    padding-bottom: 50px;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
 `
 
 export const Infos = styled.div`
@@ -45,5 +72,11 @@ export const Infos = styled.div`
   span {
     color: ${colors.black};
     font-weight: bold;
+  }
+
+  @media (max-width: ${breakpoints.notebook}) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 `

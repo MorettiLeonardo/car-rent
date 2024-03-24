@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.section`
   display: flex;
@@ -25,6 +25,13 @@ export const Container = styled.section`
     width: 50%;
     text-align: center;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    > h2,
+    > h4 {
+      font-size: 1.5rem;
+    }
+  }
 `
 
 export const TestimonialsContainer = styled.div`
@@ -32,6 +39,10 @@ export const TestimonialsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5%;
+
+  @media (max-width: ${breakpoints.notebook}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const Card = styled.div`
@@ -47,6 +58,12 @@ export const Card = styled.div`
     font-size: 24px;
     width: 100%;
     margin-bottom: 24px;
+  }
+
+  @media (max-width: ${breakpoints.notebook}) {
+    > p {
+      font-size: 18px;
+    }
   }
 `
 

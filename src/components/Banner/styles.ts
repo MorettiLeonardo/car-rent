@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const BannerContainer = styled.div`
   text-align: center;
@@ -15,5 +15,11 @@ export const BannerContainer = styled.div`
     margin-top: 16px;
     font-size: 24px;
     font-weight: 400;
+  }
+
+  @media (max-width: ${breakpoints.notebook}) {
+    h2 {
+      font-size: 26px;
+    }
   }
 `

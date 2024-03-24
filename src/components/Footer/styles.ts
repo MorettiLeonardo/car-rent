@@ -1,11 +1,20 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.div`
   display: grid;
   column-gap: 32px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 100px 0;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  @media (max-width: ${breakpoints.smartphone}) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 `
 
 export const Infos = styled.div`
@@ -41,6 +50,13 @@ export const ContactInfo = styled.p`
     margin-top: 8px;
     display: flex;
     gap: 8px;
+    align-items: center;
+  }
+
+  @media (max-width: ${breakpoints.smartphone}) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 `

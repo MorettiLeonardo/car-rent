@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.ul`
   display: grid;
@@ -8,6 +8,11 @@ export const Container = styled.ul`
   align-items: center;
   gap: 32px;
   padding: 200px;
+
+  @media (max-width: ${breakpoints.notebook}) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `
 
 export const TeamCard = styled.div`

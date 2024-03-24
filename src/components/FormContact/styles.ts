@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 import bgContact from '../../assets/images/Contact/bg-contact.png'
 
@@ -12,6 +12,14 @@ export const Container = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   padding: 500px 0;
+
+  @media (max-width: ${breakpoints.notebook}) {
+    padding-top: 200px;
+    padding-bottom: 950px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 `
 
 export const Infos = styled.div`

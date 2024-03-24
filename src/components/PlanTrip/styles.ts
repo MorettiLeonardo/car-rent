@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.div`
-  height: 70vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,6 +18,11 @@ export const Container = styled.div`
     margin-bottom: 100px;
     margin-top: 50px;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 150vh;
+    text-align: center;
+  }
 `
 
 export const CardContainer = styled.ul`
@@ -25,6 +30,12 @@ export const CardContainer = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 80px;
+
+  @media (max-width: ${breakpoints.notebook}) {
+    gap: 20px;
+    flex-wrap: wrap;
+    position: none;
+  }
 `
 
 export const Card = styled.div`
@@ -45,5 +56,18 @@ export const Card = styled.div`
     line-height: 1.43;
     color: ${colors.gray};
     margin-top: 16px;
+  }
+
+  @media (max-width: ${breakpoints.notebook}) {
+    width: 300px;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
   }
 `
