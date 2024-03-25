@@ -1,11 +1,16 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../styles'
 
 export const HeroContainer = styled.div`
   position: relative;
   display: flex;
   height: 80vh;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    justify-content: center;
+  }
 `
 
 export const HeroContent = styled.div`
@@ -24,11 +29,27 @@ export const HeroContent = styled.div`
     display: flex;
     gap: 16px;
   }
+
+  @media (max-width: ${breakpoints.notebook}) {
+    max-width: 400px;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
 `
 
 export const MainCar = styled.img`
   max-width: 800px;
   max-height: 800px;
+
+  @media (max-width: ${breakpoints.notebook}) {
+    max-width: 500px;
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `
 
 export const HeroBgImage = styled.img`

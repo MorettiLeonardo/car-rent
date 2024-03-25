@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 import bg from '../../assets/images/book-bg.png'
 
@@ -13,6 +13,10 @@ export const BookContainer = styled.div`
   padding: 50px 50px 60px 50px;
   border-radius: 4px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding-bottom: 100px;
+  }
 `
 
 export const FormGroup = styled.form`
@@ -23,6 +27,15 @@ export const FormGroup = styled.form`
   button {
     padding: 0;
     margin-top: 30px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+
+    button {
+      margin: 0;
+      padding: 10px;
+    }
   }
 `
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.section`
   display: flex;
@@ -12,6 +12,10 @@ export const Infos = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 10%;
   margin-top: 24px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const WhyChooseUs = styled.div`

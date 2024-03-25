@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.div`
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
 
   button {
@@ -10,6 +10,10 @@ export const Container = styled.div`
     margin-top: 8px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     padding: 12px;
+  }
+
+  @media (max-width: ${breakpoints.notebook}) {
+    max-width: 200px;
   }
 `
 
@@ -52,7 +56,11 @@ export const CarImage = styled.div`
   img {
     width: 500px;
     height: 327px;
-    /* object-fit: cover; */
+
+    @media (max-width: ${breakpoints.notebook}) {
+      width: 300px;
+      height: 200px;
+    }
   }
 `
 

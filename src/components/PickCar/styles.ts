@@ -1,13 +1,15 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.section`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: ${colors.white};
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding-bottom: 1300px;
+  }
 `
 
 export const Infos = styled.div`
@@ -33,16 +35,30 @@ export const Infos = styled.div`
   }
 `
 
+export const CarInfos = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+`
+
 export const PickContainer = styled.div`
   display: flex;
-  margin-top: 54px;
   gap: 150px;
+  margin-top: 54px;
 `
 
 export const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 `
 
 export const Button = styled.button`
@@ -59,5 +75,10 @@ export const Button = styled.button`
   &.is-selected {
     color: ${colors.white};
     background-color: ${colors.orange};
+  }
+
+  @media (max-width: ${breakpoints.notebook}) {
+    width: auto;
+    font-size: 16px;
   }
 `

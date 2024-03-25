@@ -18,25 +18,25 @@ const PickCar = () => {
           em sua próxima aventura ou viagem de negócios.
         </p>
       </S.Infos>
-      <S.PickContainer>
-        <S.ButtonsContainer>
-          {CAR_DATA.map((car) => (
-            <S.Button
-              className={car.name === currentCar ? 'is-selected' : ''}
-              onClick={() => setCurrentCar(car.name)}
-              key={car.id}
-            >
-              {car.name}
-            </S.Button>
-          ))}
-        </S.ButtonsContainer>
-        {currentCar === CAR_DATA[0].name && <CarBox carData={CAR_DATA[0]} />}
-        {currentCar === CAR_DATA[1].name && <CarBox carData={CAR_DATA[1]} />}
-        {currentCar === CAR_DATA[2].name && <CarBox carData={CAR_DATA[2]} />}
-        {currentCar === CAR_DATA[3].name && <CarBox carData={CAR_DATA[3]} />}
-        {currentCar === CAR_DATA[4].name && <CarBox carData={CAR_DATA[4]} />}
-        {currentCar === CAR_DATA[5].name && <CarBox carData={CAR_DATA[5]} />}
-      </S.PickContainer>
+      <S.CarInfos>
+        <S.PickContainer>
+          <S.ButtonsContainer>
+            {CAR_DATA.map((car) => (
+              <S.Button
+                className={car.name === currentCar ? 'is-selected' : ''}
+                onClick={() => setCurrentCar(car.name)}
+                key={car.id}
+              >
+                {car.name}
+              </S.Button>
+            ))}
+          </S.ButtonsContainer>
+        </S.PickContainer>
+        {CAR_DATA.map(
+          (car) =>
+            currentCar === car.name && <CarBox key={car.id} carData={car} />
+        )}
+      </S.CarInfos>
     </S.Container>
   )
 }
