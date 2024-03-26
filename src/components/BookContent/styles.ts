@@ -60,4 +60,34 @@ export const InputGroup = styled.div`
     font-weight: bold;
     font-size: 18px;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    justify-content: center;
+    align-items: center;
+    input,
+    label,
+    select {
+      width: 100%;
+    }
+  }
+`
+
+export const Overlay = styled.div`
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: ${colors.black};
+  top: 0;
+  left: 0;
+  opacity: 70%;
+`
+
+export const ButtonContainer = styled.div`
+  width: 100%;
+
+  button {
+    width: 100%;
+    padding: 11px;
+  }
 `

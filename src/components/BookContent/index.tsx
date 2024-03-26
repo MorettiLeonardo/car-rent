@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
@@ -8,6 +9,8 @@ import Button from '../Button'
 import * as S from './styles'
 
 const BookContent = () => {
+  const [openModal, setOpenModal] = useState(false)
+
   const form = useFormik({
     initialValues: {
       carType: '',
@@ -31,60 +34,66 @@ const BookContent = () => {
   }
 
   return (
-    <S.BookContainer className="container">
-      <h2>Alguar um carro</h2>
-      <S.FormGroup onSubmit={form.handleSubmit}>
-        <S.InputGroup>
-          <label htmlFor="carType">
-            Selecione a marca do carro <span className="isOrange">*</span>
-          </label>
-          <select
-            id="carType"
-            name="carType"
-            onChange={form.handleChange}
-            onBlur={form.handleBlur}
-            value={form.values.carType}
-            className={checkInputHasError('carType') ? 'error' : ''}
-          >
-            <option value="">Selecione a marca do carro</option>
-            {CAR_DATA.map((item) => (
-              <option key={item.name} value={item.name}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-        </S.InputGroup>
-        <S.InputGroup>
-          <label htmlFor="pickUp">
-            Retirada <span className="isOrange">*</span>
-          </label>
-          <input
-            id="pickUp"
-            type="date"
-            name="pickUp"
-            onChange={form.handleChange}
-            onBlur={form.handleBlur}
-            value={form.values.pickUp}
-            className={checkInputHasError('pickUp') ? 'error' : ''}
-          />
-        </S.InputGroup>
-        <S.InputGroup>
-          <label htmlFor="pickOff">
-            Devolução <span className="isOrange">*</span>
-          </label>
-          <input
-            id="pickOff"
-            type="date"
-            name="pickOff"
-            onChange={form.handleChange}
-            onBlur={form.handleBlur}
-            value={form.values.pickOff}
-            className={checkInputHasError('pickOff') ? 'error' : ''}
-          />
-        </S.InputGroup>
-        <Button color="orange" text="Buscar" type="submit" />
-      </S.FormGroup>
-    </S.BookContainer>
+    <>
+      {openModal && <S.Overlay onClick={() => setOpenModal(false)} />}
+      <S.BookContainer className="container">
+        <h2>Alguar um carro</h2>
+
+        <S.FormGroup onSubmit={form.handleSubmit}>
+          <S.InputGroup>
+            <label htmlFor="pickUp">
+              Retirada <span className="isOrange">*</span>
+            </label>
+            <input
+              id="pickUp"
+              type="date"
+              name="pickUp"
+              onChange={form.handleChange}
+              onBlur={form.handleBlur}
+              value={form.values.pickUp}
+              className={checkInputHasError('pickUp') ? 'error' : ''}
+            />
+          </S.InputGroup>
+          <S.InputGroup>
+            <label htmlFor="pickOff">
+              Devolução <span className="isOrange">*</span>
+            </label>
+            <input
+              id="pickOff"
+              type="date"
+              name="pickOff"
+              onChange={form.handleChange}
+              onBlur={form.handleBlur}
+              value={form.values.pickOff}
+              className={checkInputHasError('pickOff') ? 'error' : ''}
+            />
+          </S.InputGroup>
+          <S.InputGroup>
+            <label htmlFor="carType">
+              Selecione a marca do carro <span className="isOrange">*</span>
+            </label>
+            <select
+              id="carType"
+              name="carType"
+              onChange={form.handleChange}
+              onBlur={form.handleBlur}
+              value={form.values.carType}
+              className={checkInputHasError('carType') ? 'error' : ''}
+            >
+              <option value="">Selecione a marca do carro</option>
+              {CAR_DATA.map((item) => (
+                <option key={item.name} value={item.name}>
+                  {item.name}
+                </option>
+              ))}
+            </select>
+          </S.InputGroup>
+          <S.ButtonContainer onClick={() => setOpenModal(!openModal)}>
+            <Button color="orange" text="Buscar" type="submit" />
+          </S.ButtonContainer>
+        </S.FormGroup>
+      </S.BookContainer>
+    </>
   )
 }
 

@@ -61,6 +61,10 @@ export const CarImage = styled.div`
       width: 300px;
       height: 200px;
     }
+    @media (max-width: ${breakpoints.smartphone}) {
+      width: 200px;
+      height: 130px;
+    }
   }
 `
 

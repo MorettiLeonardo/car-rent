@@ -22,4 +22,10 @@ export const BannerContainer = styled.div`
       font-size: 26px;
     }
   }
+  @media (max-width: ${breakpoints.smartphone}) {
+    h2,
+    h3 {
+      font-size: 16px;
+    }
+  }
 `
