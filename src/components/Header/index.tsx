@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/images/logo.png'
@@ -5,18 +6,20 @@ import hamburguer from '../../assets/svg/hamburguer.svg'
 import close from '../../assets/svg/close.svg'
 
 import Button from '../Button'
-
 import * as S from './styles'
-import { useState } from 'react'
 
 const Header = () => {
   const [active, setActive] = useState(false)
 
+  const toggleMenu = () => {
+    setActive(!active)
+  }
+
   return (
     <>
       {active && (
-        <S.MobileNav>
-          <img src={close} onClick={() => setActive(false)} alt="Fechar" />
+        <S.MobileNav open={active}>
+          <img src={close} onClick={toggleMenu} alt="Fechar" />
           <ul>
             <li>
               <Link to={'/'}>Home</Link>

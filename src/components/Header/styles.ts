@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { colors } from '../../styles'
 
 export const NavPC = styled.nav`
@@ -61,23 +61,46 @@ export const HeaderLink = styled.span`
   }
 `
 
-export const MobileNav = styled.nav`
+const slideInAnimation = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`
+
+const slideOutAnimation = keyframes`
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+`
+
+type Props = { open: boolean }
+
+export const MobileNav = styled.nav<Props>`
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
   background-color: ${colors.white};
   z-index: 2;
+
+  animation: ${({ open }) => (open ? slideInAnimation : slideOutAnimation)} 0.3s
+    ease-in-out forwards;
 
   img {
     position: absolute;
     max-width: 30px;
     max-height: 30px;
     cursor: pointer;
-    top: 16px;
-    right: 16px;
+    top: 44px;
+    right: 44px;
   }
 
   ul {
