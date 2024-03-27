@@ -11,11 +11,12 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  z-index: 1;
+  /* margin: 0 auto;
+  /* max-width: 1330px; */
 
   button {
     font-size: 14px;
+    z-index: 2;
   }
 
   img {
@@ -39,6 +40,7 @@ export const Buttons = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+  z-index: 2;
 
   @media (max-width: 1100px) {
     display: none;

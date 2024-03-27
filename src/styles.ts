@@ -35,7 +35,6 @@ const GlobalStyle = createGlobalStyle`
     max-width: 1330px;
     width: 100%;
     margin: 0 auto;
-    position: relative;
 
     @media (max-width: 1330px) {
       max-width: 90%;
