@@ -11,8 +11,6 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin: 0 auto;
-  /* max-width: 1330px; */
 
   button {
     font-size: 14px;
@@ -50,6 +48,8 @@ export const Buttons = styled.div`
 export const HeaderLinksList = styled.ul`
   display: flex;
   gap: 16px;
+
+  z-index: 3;
 `
 
 export const HeaderLink = styled.span`
@@ -91,7 +91,7 @@ export const MobileNav = styled.nav<Props>`
   min-height: 100vh;
   min-width: 100%;
   background-color: ${colors.white};
-  z-index: 2;
+  z-index: 99;
 
   animation: ${({ open }) => (open ? slideInAnimation : slideOutAnimation)} 0.3s
     ease-in-out forwards;

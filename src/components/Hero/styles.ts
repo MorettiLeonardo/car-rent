@@ -56,4 +56,8 @@ export const HeroBgImage = styled.img`
   position: absolute;
   right: 0;
   top: 0px;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
 `
