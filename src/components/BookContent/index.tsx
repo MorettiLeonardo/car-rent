@@ -7,6 +7,7 @@ import { CAR_DATA } from '../CarData'
 import Button from '../Button'
 
 import * as S from './styles'
+import ReservationModal from '../ReservationModal'
 
 const BookContent = () => {
   const [openModal, setOpenModal] = useState(false)
@@ -35,7 +36,12 @@ const BookContent = () => {
 
   return (
     <>
-      {openModal && <S.Overlay onClick={() => setOpenModal(false)} />}
+      {openModal && (
+        <>
+          <S.Overlay onClick={() => setOpenModal(false)} />
+          <ReservationModal />
+        </>
+      )}
       <S.BookContainer className="container">
         <h2>Alguar um carro</h2>
 

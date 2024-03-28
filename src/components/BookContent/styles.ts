@@ -7,7 +7,6 @@ export const BookContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 150px;
   background-image: url(${bg});
   background-color: ${colors.white};
   padding: 50px 50px 60px 50px;
@@ -15,7 +14,7 @@ export const BookContainer = styled.div`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
   @media (max-width: ${breakpoints.tablet}) {
-    padding-bottom: 100px;
+    padding-bottom: 130px;
   }
 `
 
@@ -74,7 +73,7 @@ export const InputGroup = styled.div`
 
 export const Overlay = styled.div`
   position: fixed;
-  z-index: 3;
+  z-index: 2;
   width: 100%;
   height: 100%;
   background-color: ${colors.black};
