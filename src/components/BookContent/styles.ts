@@ -81,12 +81,3 @@ export const Overlay = styled.div`
   left: 0;
   opacity: 70%;
 `
-
-export const ButtonContainer = styled.div`
-  width: 100%;
-
-  button {
-    width: 100%;
-    padding: 11px;
-  }
-`

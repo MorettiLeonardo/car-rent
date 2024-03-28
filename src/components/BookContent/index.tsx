@@ -11,6 +11,7 @@ import ReservationModal from '../ReservationModal'
 
 const BookContent = () => {
   const [openModal, setOpenModal] = useState(false)
+  const [image, setImage] = useState('')
 
   const form = useFormik({
     initialValues: {
@@ -23,7 +24,7 @@ const BookContent = () => {
       pickUp: Yup.string().required('O campo é obrigatório.'),
       pickOff: Yup.string().required('O campo é obrigatório.')
     }),
-    onSubmit: (values) => console.log(values)
+    onSubmit: () => setOpenModal(true)
   })
 
   const checkInputHasError = (fieldName: string) => {
@@ -39,7 +40,12 @@ const BookContent = () => {
       {openModal && (
         <>
           <S.Overlay onClick={() => setOpenModal(false)} />
-          <ReservationModal />
+          <ReservationModal
+            carImage={image}
+            pickUpDate={form.values.pickUp}
+            pickOffDate={form.values.pickOff}
+            carName={form.values.carType}
+          />
         </>
       )}
       <S.BookContainer className="container">
@@ -81,7 +87,16 @@ const BookContent = () => {
             <select
               id="carType"
               name="carType"
-              onChange={form.handleChange}
+              onChange={(event) => {
+                form.handleChange(event)
+                const selectedCarType = event.target.value
+                const selectedCar = CAR_DATA.find(
+                  (item) => item.name === selectedCarType
+                )
+                if (selectedCar) {
+                  setImage(selectedCar.img)
+                }
+              }}
               onBlur={form.handleBlur}
               value={form.values.carType}
               className={checkInputHasError('carType') ? 'error' : ''}
@@ -94,9 +109,12 @@ const BookContent = () => {
               ))}
             </select>
           </S.InputGroup>
-          <S.ButtonContainer onClick={() => setOpenModal(!openModal)}>
-            <Button color="orange" text="Buscar" type="submit" />
-          </S.ButtonContainer>
+          <Button
+            color="orange"
+            text="Buscar"
+            type="submit"
+            onSubmit={() => form.handleSubmit()}
+          />
         </S.FormGroup>
       </S.BookContainer>
     </>
