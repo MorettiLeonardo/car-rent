@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.div`
   max-width: 800px;
@@ -54,6 +54,18 @@ export const InfosRent = styled.div`
   margin: 16px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+  }
 `
 
 export const InfoDate = styled.div`
@@ -64,6 +76,12 @@ export const InfoDate = styled.div`
     align-items: center;
     gap: 8px;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    img {
+      width: auto;
+    }
+  }
 `
 
 export const InfoCar = styled.div`
@@ -71,6 +89,12 @@ export const InfoCar = styled.div`
     margin-top: 16px;
     max-width: 350px;
     height: 210px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    h3 {
+      margin-top: 32px;
+    }
   }
 `
 
@@ -81,12 +105,22 @@ export const FormRent = styled.form`
     font-size: 18px;
     margin-bottom: 32px;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    button {
+      width: 100%;
+    }
+  }
 `
 
 export const InputGroupContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 16px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const InputGroup = styled.div`
