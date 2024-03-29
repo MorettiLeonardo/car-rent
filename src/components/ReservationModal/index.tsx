@@ -1,6 +1,7 @@
 import { MouseEventHandler } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
+import InputMask from 'react-input-mask'
 
 import location from '../../assets/svg/location.svg'
 
@@ -39,8 +40,8 @@ const ReservationModal = ({
       firstName: Yup.string().min(3).required('O campo é obrigatório'),
       lastName: Yup.string().min(3).required('O campo é obrigatório'),
       phoneNumber: Yup.string()
-        .min(12)
-        .max(12)
+        .min(15)
+        .max(15)
         .required('O campo é obrigatório'),
       age: Yup.string().required('O campo é obrigatório'),
       email: Yup.string().required('O campo é obrigatório'),
@@ -140,28 +141,30 @@ const ReservationModal = ({
             <label htmlFor="phoneNumber">
               Número de telefone <span className="isOrange">*</span>
             </label>
-            <input
-              type="number"
+            <InputMask
+              type="text"
               name="phoneNumber"
               placeholder="Digite seu telefone"
               onBlur={form.handleBlur}
               onChange={form.handleChange}
               value={form.values.phoneNumber}
               className={checkInputHasError('phoneNumber') ? 'error' : ''}
+              mask={'(99) 99999-9999'}
             />
           </S.InputGroup>
           <S.InputGroup>
             <label htmlFor="age">
               Idade <span className="isOrange">*</span>
             </label>
-            <input
-              type="number"
+            <InputMask
+              type="text"
               name="age"
               placeholder="Digite sua idade"
               onBlur={form.handleBlur}
               onChange={form.handleChange}
               value={form.values.age}
               className={checkInputHasError('age') ? 'error' : ''}
+              mask={'99'}
             />
           </S.InputGroup>
           <S.InputGroup>
@@ -210,7 +213,7 @@ const ReservationModal = ({
             <label htmlFor="zipcode">
               CEP <span className="isOrange">*</span>
             </label>
-            <input
+            <InputMask
               type="text"
               name="zipcode"
               placeholder="Digite seu CEP"
@@ -218,6 +221,7 @@ const ReservationModal = ({
               onChange={form.handleChange}
               value={form.values.zipcode}
               className={checkInputHasError('zipcode') ? 'error' : ''}
+              mask={'99999-999'}
             />
           </S.InputGroup>
         </S.InputGroupContainer>
