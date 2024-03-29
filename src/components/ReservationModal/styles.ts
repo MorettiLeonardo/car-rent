@@ -70,6 +70,7 @@ export const InfoCar = styled.div`
   img {
     margin-top: 16px;
     max-width: 350px;
+    height: 210px;
   }
 `
 
@@ -96,6 +97,12 @@ export const InputGroup = styled.div`
   input {
     margin-top: 8px;
     padding: 14px;
+    border: 1px solid ${colors.gray};
+    border-radius: 4px;
+
+    &.error {
+      border: 1px solid red;
+    }
   }
 `
 

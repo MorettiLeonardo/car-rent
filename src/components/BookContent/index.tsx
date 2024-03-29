@@ -41,6 +41,7 @@ const BookContent = () => {
         <>
           <S.Overlay onClick={() => setOpenModal(false)} />
           <ReservationModal
+            onClick={() => setOpenModal(false)}
             carImage={image}
             pickUpDate={form.values.pickUp}
             pickOffDate={form.values.pickOff}
