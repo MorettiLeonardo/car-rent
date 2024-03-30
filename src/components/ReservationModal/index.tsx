@@ -16,6 +16,7 @@ type Props = {
   carName: string
   carImage: string
   onClick?: MouseEventHandler<HTMLParagraphElement>
+  closeModal: () => void
 }
 
 const ReservationModal = ({
@@ -23,7 +24,8 @@ const ReservationModal = ({
   pickUpDate,
   carName,
   carImage,
-  onClick
+  onClick,
+  closeModal
 }: Props) => {
   const form = useFormik({
     initialValues: {
@@ -50,7 +52,7 @@ const ReservationModal = ({
       zipcode: Yup.string().min(9).max(9).required('O campo é obrigatório')
     }),
 
-    onSubmit: (values) => console.log(values)
+    onSubmit: () => closeModal()
   })
 
   const checkInputHasError = (fieldName: string) => {

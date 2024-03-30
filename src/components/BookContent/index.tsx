@@ -46,6 +46,7 @@ const BookContent = () => {
             pickUpDate={form.values.pickUp}
             pickOffDate={form.values.pickOff}
             carName={form.values.carType}
+            closeModal={() => setOpenModal(false)}
           />
         </>
       )}
