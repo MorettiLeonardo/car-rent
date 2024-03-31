@@ -25,7 +25,7 @@ export const Btn = styled.button<Props>`
 
   &:hover {
     box-shadow: ${(props) =>
-      props.color === 'orange' ? '0 10px 15px 0 rgba(255, 83, 48, 0.45)' : ''};
+      props.color === 'orange' ? `0 5px 15px 0 ${colors.primary}` : ''};
     background-color: ${(props) =>
       props.color === 'black' ? `${colors.bgColor}` : ''};
     color: ${(props) => (props.color === 'black' ? `${colors.black}` : '')};

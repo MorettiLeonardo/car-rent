@@ -52,7 +52,6 @@ const BookContent = () => {
       )}
       <S.BookContainer className="container">
         <h2>Alguar um carro</h2>
-
         <S.FormGroup onSubmit={form.handleSubmit}>
           <S.InputGroup>
             <label htmlFor="pickUp">

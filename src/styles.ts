@@ -56,6 +56,8 @@ export const Overlay = styled.div`
   width: 100%;
   height: 30vh;
   object-fit: cover;
+  margin-top: -120px;
+  pointer-events: none;
 `
 
 export default GlobalStyle

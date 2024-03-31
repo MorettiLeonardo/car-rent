@@ -33,7 +33,7 @@ const CarBox = ({ carData }: Props) => {
     <>
       <S.CarImage>
         {carLoad ? (
-          <S.Loader className="is-loading">
+          <S.Loader>
             <ClipLoader color={colors.primary} />
           </S.Loader>
         ) : (
