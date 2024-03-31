@@ -44,7 +44,7 @@ export const Infos = styled.div`
   }
 `
 
-export const ContactInfo = styled.p`
+export const ContactInfo = styled.div`
   p {
     color: ${colors.black};
     margin-top: 8px;
