@@ -19,7 +19,7 @@ export const Container = styled.div`
 
 export const RentPerDay = styled.h2`
   color: ${colors.white};
-  background-color: ${colors.orange};
+  background-color: ${colors.primary};
   padding: 14px;
   font-size: 20px;
   font-weight: 400;

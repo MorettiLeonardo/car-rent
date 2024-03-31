@@ -30,7 +30,7 @@ export const Card = styled.div`
 
 export const CardContainer = styled.div`
   padding: 16px;
-  border: 1px solid ${colors.lightGrey};
+  border: 1px solid ${colors.lightGray};
   border-top: none;
 `
 

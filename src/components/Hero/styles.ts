@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const HeroContainer = styled.div`
   position: relative;
@@ -28,6 +28,11 @@ export const HeroContent = styled.div`
     margin-top: 28px;
     display: flex;
     gap: 16px;
+  }
+
+  p {
+    color: ${colors.gray};
+    font-size: 16px;
   }
 
   @media (max-width: ${breakpoints.notebook}) {

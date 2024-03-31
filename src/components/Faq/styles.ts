@@ -33,9 +33,9 @@ export const QuestionsContainer = styled.div`
   }
 
   .is-selected {
-    background-color: ${colors.orange};
+    background-color: ${colors.primary};
     color: ${colors.white};
-    box-shadow: 0 0px 7px 0 ${colors.orange};
+    box-shadow: 0 0px 7px 0 ${colors.primary};
   }
 
   h4,

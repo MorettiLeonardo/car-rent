@@ -3,7 +3,6 @@ import mainCar from '../../assets/images/main-car.png'
 
 import Button from '../Button'
 
-import { DefaultParagraph } from '../../styles'
 import * as S from './styles'
 
 const Hero = () => (
@@ -16,10 +15,10 @@ const Hero = () => (
           Economize <span className="isOrange">muito</span> com nosso aluguel de
           carros
         </h1>
-        <DefaultParagraph>
+        <p>
           Alugue o carro dos seus sonhos. Preços imbatíveis, milhas ilimitadas,
           opções de retirada flexíveis e muito mais.
-        </DefaultParagraph>
+        </p>
         <div>
           <Button padding="24px" color="orange" text="Reservar Viagem" />
           <Button color="black" text="Ver mais" />

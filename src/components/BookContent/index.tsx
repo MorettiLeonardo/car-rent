@@ -4,10 +4,10 @@ import * as Yup from 'yup'
 
 import { CAR_DATA } from '../CarData'
 
+import ReservationModal from '../ReservationModal'
 import Button from '../Button'
 
 import * as S from './styles'
-import ReservationModal from '../ReservationModal'
 
 const BookContent = () => {
   const [openModal, setOpenModal] = useState(false)

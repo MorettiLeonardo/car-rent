@@ -11,9 +11,9 @@ export const Btn = styled.button<Props>`
   color: ${colors.white};
   font-weight: 600;
   font-size: 16px;
-  background-color: ${colors.orange};
+  background-color: ${colors.primary};
   background-color: ${(props) =>
-    props.color === 'orange' ? colors.orange : colors.black};
+    props.color === 'orange' ? colors.primary : colors.black};
   padding: ${(props) => (props.padding ? props.padding : '12px')};
   border-radius: 4px;
   box-shadow: ${(props) =>
@@ -21,7 +21,7 @@ export const Btn = styled.button<Props>`
   transition: 0.4s;
   border: 2px solid;
   border-color: ${(props) =>
-    props.color === 'orange' ? colors.orange : colors.black};
+    props.color === 'orange' ? colors.primary : colors.black};
 
   &:hover {
     box-shadow: ${(props) =>

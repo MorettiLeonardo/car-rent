@@ -1,10 +1,12 @@
 import { letter, phone, location } from '../../assets/svg/path'
+
 import Button from '../Button'
-import { Container, Infos, FormContainer, InputGroup } from './styles'
+
+import * as S from './styles'
 
 const FormContact = () => (
-  <Container className="container">
-    <Infos>
+  <S.Container className="container">
+    <S.Infos>
       <h2>Precisa de informações adicionais?</h2>
       <p>
         Um profissional multifacetado, qualificado em diversas áreas de
@@ -20,9 +22,9 @@ const FormContact = () => (
       <h4>
         <span>{location}</span> Curitiba, Paraná
       </h4>
-    </Infos>
-    <FormContainer>
-      <InputGroup>
+    </S.Infos>
+    <S.FormContainer>
+      <S.InputGroup>
         <label htmlFor="fullName">
           Nome completo <span className="isOrange">*</span>
         </label>
@@ -32,8 +34,8 @@ const FormContact = () => (
           id="fullName"
           placeholder='Exemplo: "João Silva"'
         />
-      </InputGroup>
-      <InputGroup>
+      </S.InputGroup>
+      <S.InputGroup>
         <label htmlFor="email">
           Email <span className="isOrange">*</span>
         </label>
@@ -43,16 +45,16 @@ const FormContact = () => (
           id="email"
           placeholder="seuemail@exemplo.com"
         />
-      </InputGroup>
-      <InputGroup>
+      </S.InputGroup>
+      <S.InputGroup>
         <label htmlFor="tellUs">
           Conte-nos sobre isso <span className="isOrange">*</span>
         </label>
         <textarea name="tellUs" id="tellUs" placeholder="Escreva aqui..." />
-      </InputGroup>
+      </S.InputGroup>
       <Button color="orange" text="Enviar mensagem" />
-    </FormContainer>
-  </Container>
+    </S.FormContainer>
+  </S.Container>
 )
 
 export default FormContact

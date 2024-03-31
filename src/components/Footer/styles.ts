@@ -37,7 +37,7 @@ export const Infos = styled.div`
 
   input {
     text-align: start;
-    background-color: ${colors.lightGrey};
+    background-color: ${colors.lightGray};
     padding: 16px;
     border: none;
     border-radius: 4px;
@@ -71,7 +71,7 @@ export const ListInfos = styled.ul`
     transition: 0.4s;
 
     &:hover {
-      color: ${colors.orange};
+      color: ${colors.primary};
     }
   }
 `

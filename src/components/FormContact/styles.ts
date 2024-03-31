@@ -47,7 +47,7 @@ export const Infos = styled.div`
     transition: 0.3s;
 
     &:hover {
-      color: ${colors.orange};
+      color: ${colors.primary};
     }
   }
 `
@@ -72,7 +72,7 @@ export const InputGroup = styled.div`
   }
 
   input {
-    background-color: ${colors.lightGrey};
+    background-color: ${colors.lightGray};
     border: none;
     margin-bottom: 16px;
     padding: 14px;
@@ -84,7 +84,7 @@ export const InputGroup = styled.div`
     height: 150px;
     padding: 14px;
     margin-bottom: 16px;
-    background-color: ${colors.lightGrey};
+    background-color: ${colors.lightGray};
     font-size: 16px;
     opacity: 0.7;
     border: none;

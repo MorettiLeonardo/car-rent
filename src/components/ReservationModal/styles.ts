@@ -20,7 +20,7 @@ export const HeaderReservation = styled.header`
   text-align: center;
   font-size: 14px;
   color: ${colors.white};
-  background-color: ${colors.orange};
+  background-color: ${colors.primary};
   padding: 24px;
   display: flex;
   align-items: center;
@@ -34,7 +34,7 @@ export const HeaderReservation = styled.header`
 `
 
 export const Warning = styled.div`
-  background-color: ${colors.lightGrey};
+  background-color: ${colors.lightGray};
   padding: 24px;
 
   h2 {

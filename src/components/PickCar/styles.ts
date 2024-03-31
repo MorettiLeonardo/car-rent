@@ -63,7 +63,7 @@ export const ButtonsContainer = styled.div`
 
 export const Button = styled.button`
   border: none;
-  background-color: ${colors.lightGrey};
+  background-color: ${colors.lightGray};
   font-size: 20px;
   font-weight: 500;
   padding: 14px;
@@ -74,7 +74,7 @@ export const Button = styled.button`
   &:hover,
   &.is-selected {
     color: ${colors.white};
-    background-color: ${colors.orange};
+    background-color: ${colors.primary};
   }
 
   @media (max-width: ${breakpoints.notebook}) {

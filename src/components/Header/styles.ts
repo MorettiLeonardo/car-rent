@@ -59,7 +59,7 @@ export const HeaderLink = styled.span`
   color: ${colors.black};
 
   &:hover {
-    color: ${colors.orange};
+    color: ${colors.primary};
   }
 `
 

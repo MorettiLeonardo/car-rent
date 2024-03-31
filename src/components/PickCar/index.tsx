@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
-import CarBox from '../CarBox'
 import { CAR_DATA } from '../CarData'
+
+import CarBox from '../CarBox'
 
 import * as S from './styles'
 

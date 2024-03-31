@@ -12,9 +12,9 @@ export const colors = {
   white: '#fff',
   black: '#000',
   gray: '#717482',
-  lightGrey: '#e9e9e9',
+  lightGray: '#e9e9e9',
   darkGray: '#2d2d2d',
-  orange: '#ff4d30',
+  primary: '#ff4d30',
   bgColor: '#f8f8f8',
   borderColor: '#ccc'
 }
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Rubik", sans-serif;
     list-style: none;
     text-decoration: none;
-    scrollbar-color: ${colors.orange} ${colors.white};
+    scrollbar-color: ${colors.primary} ${colors.white};
     scrollbar-width: thin;
   }
 
@@ -43,13 +43,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .isOrange {
-    color: ${colors.orange};
+    color: ${colors.primary};
   }
-`
-
-export const DefaultParagraph = styled.p`
-  color: ${colors.gray};
-  font-size: 16px;
 `
 
 export const Overlay = styled.div`
