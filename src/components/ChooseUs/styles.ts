@@ -41,6 +41,12 @@ export const WhyChooseUs = styled.div`
   button {
     max-width: 200px;
   }
+
+  @media (max-width: ${breakpoints.smartphone}) {
+    h2 {
+      font-size: 28px;
+    }
+  }
 `
 export const CartContainer = styled.div`
   display: flex;
@@ -57,6 +63,11 @@ export const Card = styled.div`
   img {
     max-width: 110px;
     width: 100%;
+  }
+
+  @media (max-width: ${breakpoints.smartphone}) {
+    flex-direction: column;
+    text-align: center;
   }
 `
 

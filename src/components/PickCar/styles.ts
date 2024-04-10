@@ -33,6 +33,12 @@ export const Infos = styled.div`
     color: ${colors.gray};
     max-width: 600px;
   }
+
+  @media (max-width: ${breakpoints.smartphone}) {
+    h3 {
+      font-size: 28px;
+    }
+  }
 `
 
 export const CarInfos = styled.div`

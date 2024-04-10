@@ -22,6 +22,10 @@ export const Container = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     height: 150vh;
     text-align: center;
+
+    h2 {
+      font-size: 28px;
+    }
   }
 `
 

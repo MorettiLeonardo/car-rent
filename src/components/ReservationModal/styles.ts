@@ -95,6 +95,11 @@ export const InfoCar = styled.div`
     h3 {
       margin-top: 32px;
     }
+
+    img {
+      width: 200px;
+      height: 130px;
+    }
   }
 `
 
